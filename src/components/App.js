@@ -16,7 +16,7 @@ return(
             <input type="text" value={name} onChange={handleChange}/>
 
         </label>
-        {name && <p>Hello, {name}</p>}
+        {name && <p>Hello {name}!</p>}
     </div>
 )
   
