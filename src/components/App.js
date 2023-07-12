@@ -1,15 +1,25 @@
 
-import React from "react";
+import React,{useState} from "react";
 import './../styles/App.css';
-import Greet from "./Greet";
+
 
 const App = () => {
-  return (
+  let [name,setName]=useState('');
+
+const handleChange=(event)=>{
+    setName(event.target.value);
+}
+return(
     <div>
-        {/* Do not remove the main div */}
-        <Greet/>
+        <label>
+            Enter your name:
+            <input type="text" value={name} onChange={handleChange}/>
+
+        </label>
+        {name && <p>Hello, {name}</p>}
     </div>
-  )
+)
+  
 }
 
-export default App
+export default App;
